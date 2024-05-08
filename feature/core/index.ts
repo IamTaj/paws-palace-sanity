@@ -1,4 +1,4 @@
-import {FeatureSchemaDefinition} from '../../schemas/types'
+import { FeatureSchemaDefinition } from '../../schemaTypes/types'
 import {Category} from './documents/category'
 import {Page} from './documents/page'
 import { Card } from './objects/cards'

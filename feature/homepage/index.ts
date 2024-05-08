@@ -1,4 +1,4 @@
-import {FeatureSchemaDefinition} from '../../schemas/types'
+import { FeatureSchemaDefinition } from "../../schemaTypes/types";
 
 export const homePage: FeatureSchemaDefinition = {
   variants: {
