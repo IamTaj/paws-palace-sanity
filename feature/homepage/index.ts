@@ -23,6 +23,11 @@ export const homePage: FeatureSchemaDefinition = {
         title: 'Grey Background Item',
         value: 'greyBackgroundItem',
       },
+      {
+        title: 'Carousel Card',
+        value: 'carouselCard',
+      },
+
     ],
     group: [
       {
@@ -44,6 +49,10 @@ export const homePage: FeatureSchemaDefinition = {
       {
         title: 'Grey Background Group',
         value: 'greyBackgroundGroup',
+      },
+      {
+        title: 'Offer Carousel Group',
+        value: 'offerCarouselGroup',
       },
     ],
   },
