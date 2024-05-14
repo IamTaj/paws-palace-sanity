@@ -27,6 +27,10 @@ export const homePage: FeatureSchemaDefinition = {
         title: 'Carousel Card',
         value: 'carouselCard',
       },
+      {
+        title: 'Grid Card',
+        value: 'gridCard',
+      },
 
     ],
     group: [
@@ -53,6 +57,10 @@ export const homePage: FeatureSchemaDefinition = {
       {
         title: 'Offer Carousel Group',
         value: 'offerCarouselGroup',
+      },
+      {
+        title: 'Group With Column',
+        value: 'groupWithColumn',
       },
     ],
   },
