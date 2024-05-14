@@ -1,6 +1,6 @@
 import {IoApps, IoLayers as Icon, IoSettings} from 'react-icons/io5'
 import {hiddenField} from '../../../utils/shared-utils'
-import { Content, SchemaInputProps } from '../../../schemaTypes/types'
+import {Content, SchemaInputProps} from '../../../schemaTypes/types'
 
 export const groupPreview = {
   select: {
@@ -9,7 +9,7 @@ export const groupPreview = {
     subtitle: 'subtitle',
     hidden: 'isHidden',
   },
-  prepare({title, items, subtitle, hidden}:any) {
+  prepare({title, items, subtitle, hidden}: any) {
     const count = items?.length || 0
     const countText = count === 1 ? '1 item' : `${count} items`
     const hiddenIndicator = hidden ? '🚫 ' : ''
@@ -87,6 +87,17 @@ export class Group extends Content {
             list: variants.group,
           },
           group: 'main',
+        },
+        {
+          name: 'gridLayout',
+          title: 'Grid Layout',
+          type: 'boolean',
+        },
+        {
+          name: 'columnSize',
+          type: 'number',
+          title: 'Column Number',
+          hidden: ({parent}: any) => !parent?.gridLayout,
         },
         {
           name: 'backgroundImage',
