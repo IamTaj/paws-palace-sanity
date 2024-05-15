@@ -1,4 +1,4 @@
-import { FeatureSchemaDefinition } from "../../schemaTypes/types";
+import {FeatureSchemaDefinition} from '../../schemaTypes/types'
 
 export const homePage: FeatureSchemaDefinition = {
   variants: {
@@ -28,10 +28,13 @@ export const homePage: FeatureSchemaDefinition = {
         value: 'carouselCard',
       },
       {
-        title: 'Grid Card',
-        value: 'gridCard',
+        title: 'Video Card',
+        value: 'videoCard',
       },
-
+      {
+        title: 'Card With Icons',
+        value: 'iconsCard',
+      },
     ],
     group: [
       {
@@ -61,6 +64,18 @@ export const homePage: FeatureSchemaDefinition = {
       {
         title: 'Group With Column',
         value: 'groupWithColumn',
+      },
+      {
+        title: 'Group With Split Groups Component',
+        value: 'splitGroupComponent',
+      },
+      {
+        title: 'Deal Tracker Group',
+        value: 'dealTrackGroup',
+      },
+      {
+        title: 'Group With Half Width Slider',
+        value: 'groupWithHalfWidthSlider',
       },
     ],
   },
