@@ -116,6 +116,19 @@ export class Card extends Content {
         },
 
         {
+          name: 'Products',
+          type: 'object',
+          fields: [
+            {
+              title: 'Products',
+              name: 'Proudcts',
+              type: 'reference',
+              to: [{type: 'product'}],
+            },
+          ],
+        },
+
+        {
           name: 'video',
           title: 'Video',
           type: 'file',
@@ -130,7 +143,6 @@ export class Card extends Content {
           description: 'Provide a URL for video content (if not uploaded)',
           group: 'main',
         },
-
         {
           name: 'backgroundImage',
           title: 'Background Image',

@@ -1,7 +1,11 @@
-export default {
-    title: "UI Configuration",
-    name: "uiConfiguration",
-    type: "document",
+import { Content, SchemaInputProps } from "../../schemaTypes/types";
+
+export class Aesthetic extends Content {
+    // title: "UI Configuration",
+    name= "uiConfiguration"
+    // type: "objects",
+    getSchema({variants, items}: SchemaInputProps) {
+      return{
     fields: [
       {
         name: "title",
@@ -61,6 +65,6 @@ export default {
           }`,
         };
       },
-    },
+    },}
   };
-  
+}

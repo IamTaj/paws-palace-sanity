@@ -35,6 +35,10 @@ export const homePage: FeatureSchemaDefinition = {
         title: 'Card With Icons',
         value: 'iconsCard',
       },
+      {
+        title: 'Card With Product Details',
+        value: 'productDetailsCard',
+      },
     ],
     group: [
       {
