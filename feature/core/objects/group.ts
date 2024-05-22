@@ -1,6 +1,7 @@
-import {IoApps, IoLayers as Icon, IoSettings} from 'react-icons/io5'
+import {IoApps, IoLayers as Icon, IoSettings, IoLayers} from 'react-icons/io5'
 import {hiddenField} from '../../../utils/shared-utils'
-import { Content, SchemaInputProps } from '../../../schemaTypes/types'
+import {Content, SchemaInputProps} from '../../../schemaTypes/types'
+import {Aesthetic} from '../../../schemas/commonUtils/uiConfiguration'
 
 export const groupPreview = {
   select: {
@@ -9,7 +10,7 @@ export const groupPreview = {
     subtitle: 'subtitle',
     hidden: 'isHidden',
   },
-  prepare({title, items, subtitle, hidden}:any) {
+  prepare({title, items, subtitle, hidden}: any) {
     const count = items?.length || 0
     const countText = count === 1 ? '1 item' : `${count} items`
     const hiddenIndicator = hidden ? '🚫 ' : ''
@@ -31,6 +32,7 @@ export class Group extends Content {
       groups: [
         {name: 'main', title: 'Main', icon: IoApps},
         {name: 'configuration', title: 'Configuration', icon: IoSettings},
+        {name: 'aesthetic', title: 'Aesthetic', icon: IoLayers},
       ],
       fields: [
         {
@@ -48,6 +50,24 @@ export class Group extends Content {
           title: 'Subtitle',
           type: 'string',
           group: 'main',
+        },
+        {
+          name: 'aesthetic',
+          title: 'Aesthetic',
+          type: 'object',
+          group: 'aesthetic',
+          fields: [
+            {
+              name: 'padding',
+              title: 'Padding',
+              type: 'string',
+            },
+            {
+              name: 'backgroundColor',
+              title: 'Background Color',
+              type: 'string',
+            },
+          ],
         },
         {
           name: 'ctaLabel',
@@ -87,6 +107,17 @@ export class Group extends Content {
             list: variants.group,
           },
           group: 'main',
+        },
+        {
+          name: 'gridLayout',
+          title: 'Grid Layout',
+          type: 'boolean',
+        },
+        {
+          name: 'columnSize',
+          type: 'number',
+          title: 'Column Number',
+          hidden: ({parent}: any) => !parent?.gridLayout,
         },
         {
           name: 'backgroundImage',

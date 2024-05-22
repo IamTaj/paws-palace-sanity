@@ -114,6 +114,35 @@ export class Card extends Content {
           ],
           group: 'main',
         },
+
+        {
+          name: 'Products',
+          type: 'object',
+          fields: [
+            {
+              title: 'Products',
+              name: 'Proudcts',
+              type: 'reference',
+              to: [{type: 'product'}],
+            },
+          ],
+        },
+
+        {
+          name: 'video',
+          title: 'Video',
+          type: 'file',
+          accept: 'video/*',
+          description: 'Upload video content for the card',
+          group: 'main',
+        },
+        {
+          name: 'videoUrl',
+          title: 'Video URL',
+          type: 'url',
+          description: 'Provide a URL for video content (if not uploaded)',
+          group: 'main',
+        },
         {
           name: 'backgroundImage',
           title: 'Background Image',
