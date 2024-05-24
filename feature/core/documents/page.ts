@@ -38,7 +38,7 @@ export class Page extends Content {
               const documentId = document._id.replace('drafts.', '')
 
               // Finds a page which has the currently specified path, excluding the current page
-              const page = await getSanityClient('dev').fetch(
+              const page = await getSanityClient('production').fetch(
                 `*[_type == "page" && path == "${path}" && !(_id match "*${documentId}")]{_id}[0]`,
               )
               const pageExists = !!page
