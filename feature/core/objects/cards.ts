@@ -121,7 +121,7 @@ export class Card extends Content {
           fields: [
             {
               title: 'Products',
-              name: 'Proudcts',
+              name: 'products',
               type: 'reference',
               to: [{type: 'product'}],
             },
