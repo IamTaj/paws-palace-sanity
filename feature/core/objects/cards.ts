@@ -1,5 +1,5 @@
 import {IoApps, IoCard as Icon, IoSettings} from 'react-icons/io5'
-import { Content, SchemaInputProps } from '../../../schemaTypes/types'
+import {Content, SchemaInputProps} from '../../../schemaTypes/types'
 
 export class Card extends Content {
   name = 'card'
@@ -17,6 +17,12 @@ export class Card extends Content {
         {
           name: 'title',
           title: 'Title',
+          type: 'string',
+          group: 'main',
+        },
+        {
+          name: 'identifier',
+          title: 'Identifier',
           type: 'string',
           group: 'main',
         },
@@ -62,7 +68,7 @@ export class Card extends Content {
             list: [...(variants?.card ?? [])],
           },
           group: 'main',
-          validation: (rule:any) => rule.required(),
+          validation: (rule: any) => rule.required(),
         },
         {
           name: 'largeVariant',
@@ -72,7 +78,7 @@ export class Card extends Content {
             list: [...(variants?.card ?? [])],
           },
           group: 'main',
-          validation: (rule:any) => rule.required(),
+          validation: (rule: any) => rule.required(),
         },
 
         {
@@ -106,6 +112,35 @@ export class Card extends Content {
               title: 'Alternative Text',
             },
           ],
+          group: 'main',
+        },
+
+        {
+          name: 'Products',
+          type: 'object',
+          fields: [
+            {
+              title: 'Products',
+              name: 'Proudcts',
+              type: 'reference',
+              to: [{type: 'product'}],
+            },
+          ],
+        },
+
+        {
+          name: 'video',
+          title: 'Video',
+          type: 'file',
+          accept: 'video/*',
+          description: 'Upload video content for the card',
+          group: 'main',
+        },
+        {
+          name: 'videoUrl',
+          title: 'Video URL',
+          type: 'url',
+          description: 'Provide a URL for video content (if not uploaded)',
           group: 'main',
         },
         {

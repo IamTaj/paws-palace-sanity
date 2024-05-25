@@ -1,7 +1,7 @@
-import {FeatureSchemaDefinition} from '../../schemas/types'
+import {FeatureSchemaDefinition} from '../../schemaTypes/types'
 import {Category} from './documents/category'
 import {Page} from './documents/page'
-import { Card } from './objects/cards'
+import {Card} from './objects/cards'
 import {Group} from './objects/group'
 
 export const core: FeatureSchemaDefinition = {
@@ -13,6 +13,9 @@ export const core: FeatureSchemaDefinition = {
       },
       {
         type: 'group',
+      },
+      {
+        type: 'category',
       },
     ],
   },
