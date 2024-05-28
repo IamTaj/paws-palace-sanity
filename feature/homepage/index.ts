@@ -39,6 +39,9 @@ export const homePage: FeatureSchemaDefinition = {
         title: 'Card With Product Details',
         value: 'productDetailsCard',
       },
+      {title:'Mobile Product Card Slider',
+        value: 'mobileProductCard'
+      }
     ],
     group: [
       {
