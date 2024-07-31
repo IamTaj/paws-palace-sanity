@@ -95,7 +95,7 @@ export class Group extends Content {
           title: 'Variant',
           type: 'string',
           options: {
-            list: variants.group,
+            list: variants?.group,
           },
           group: 'main',
         },
@@ -104,7 +104,7 @@ export class Group extends Content {
           title: 'Large Variant',
           type: 'string',
           options: {
-            list: variants.group,
+            list: variants?.group,
           },
           group: 'main',
         },
@@ -129,7 +129,7 @@ export class Group extends Content {
           name: 'items',
           title: 'Items',
           type: 'array',
-          of: items.pageItems,
+          of: items?.pageItems,
           group: 'main',
         },
       ],

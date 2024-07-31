@@ -34,6 +34,7 @@ class VariantSchemaProperties {
   group: VariantDefinition[] = []
   card: VariantDefinition[] = []
   dialog: VariantDefinition[] = []
+  header: VariantDefinition[] = []
 }
 
 abstract class Content {
